@@ -30,23 +30,23 @@ Hello World, Make a user in 3 different ways
   <%= form_tag "/users", method: 'POST' do %>
     <%= label_tag("user[username]", "Username:") %>
     <% unless @user.errors[:username].empty? %>
-      <div>
+      <span>
         Big trouble: <%= @user.errors[:username][0] %>
-      </div>
+      </span>
     <% end %>
     <%= text_field_tag("user[username]") %>
     <%= label_tag("user[email]", "Email:") %>
     <% unless @user.errors[:email].empty? %>
-      <div>
+      <span>
         Big trouble: <%= @user.errors[:email][0] %>
-      </div>
+      </span>
     <% end %>
     <%= text_field_tag("user[email]") %>
     <%= label_tag("user[password]", "Password:") %>
     <% unless @user.errors[:password].empty? %>
-      <div>
+      <span>
         Big trouble: <%= @user.errors[:password][0] %>
-      </div>
+      </span>
     <% end %>
     <%= password_field_tag("user[password]") %>
     <%= submit_tag("Submit") %>

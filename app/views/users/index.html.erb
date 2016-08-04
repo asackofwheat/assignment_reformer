@@ -1,0 +1,5 @@
+<h1>LIST OF USERS</h1>
+
+<% @user.each do |user| %>
+  <%= link_to user.username, user %><br>
+<% end %>
